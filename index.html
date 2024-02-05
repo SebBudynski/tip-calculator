@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles/css/style.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <main>
+      <h1>SPLITTER</h1>
+      <div class="content">
+        <div class="contenet__selection">
+          <div class="selection__input--container">
+            <label for="bil-amount">Bill</label>
+            <img src="images/icon-dollar.svg" alt="icon of a dolar"> 
+            <input type="number" id="bill-amount" name="bill-amount" />
+          </div>
+          <div>
+            <h2>Select Tip %</h2>
+            <button>5%</button>
+            <button>10%</button>
+            <button>15%</button>
+            <button>25%</button>
+            <button>50%</button>
+            <button>Custom</button>
+          </div>
+          <label for="Number of People">Number of People</label>
+          <img src="images/icon-person.svg" alt="icon of a person">
+          <input type="number" id="number-of-people" name="number-of-people" step="1" min="1">
+        </div>
+        <div class="content__results">
+          <p><strong>Tip Amount</strong> / person </p>
+          <p>$.4.27</p>
+          <p><strong>Total</strong> / person</p>
+          <p>$32.79</p>
+           <button>Reset</button>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Sebastian</a>.
+      </div>
+    </footer>
+  </body>
+</html>
