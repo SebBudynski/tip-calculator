@@ -1,25 +1,32 @@
-.selection__input--container {
+.input--container {
   position: relative;
   img {
     position: absolute;
-    top: 55%;
+    top: 65%;
     left: 1rem;
   }
 }
 
 .bottom__input--container {
+  position: relative;
   img {
     position: absolute;
     left: 1rem;
+    top: 30%;
   }
 }
 
-.input__label {
+h2,
+label {
   color: var(--dark-grayish-cyan);
+  font-size: 0.85rem;
+  display: inline-block;
+  margin-bottom: 1rem;
 }
 
 #bill-amount,
 #number-of-people {
+  font-family: inherit;
   background-color: var(--very-light-grayish-cyan);
   border: none;
   border-radius: 3px;
@@ -29,7 +36,8 @@
   font-weight: 700;
   height: 2.5rem;
   width: 90%;
-  &:focus {
+  &:focus,
+  &:hover {
     outline: 2px solid var(--strong-cyan);
   }
 }
@@ -40,16 +48,13 @@ input::-webkit-outer-spin-button {
   margin: 0.4rem;
 }
 
-.content__selection {
+.selection {
   width: 50%;
 }
 
 .buttons-container {
   padding: 2rem 0;
   width: 90%;
-  h2 {
-    font-size: 1rem;
-  }
 }
 
 .buttons {
@@ -59,8 +64,30 @@ input::-webkit-outer-spin-button {
 }
 
 button {
+  font-family: inherit;
   width: 30%;
   height: 2.5rem;
   margin-bottom: 0.75rem;
-  font-size: 1.5rem;
+  font-size: 1.125rem;
+  border: none;
+  background-color: var(--very-dark-cyan);
+  color: var(--white);
+  border-radius: 5px;
+  &:hover {
+    background-color: var(--light-cyan);
+    cursor: pointer;
+    color: black;
+  }
+  &:focus {
+    background-color: var(--strong-cyan);
+    color: black;
+  }
+}
+
+#custom{
+  background-color: var(--very-light-grayish-cyan);
+  color: var(--dark-grayish-cyan);
+  &:hover, &:focus {
+    border: 2px solid var(--strong-cyan);
+  }
 }

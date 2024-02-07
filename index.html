@@ -18,8 +18,8 @@
         <img src="images/logo.svg" alt="logo" />
       </h1>
       <div class="content">
-        <div class="content__selection">
-          <div class="selection__input--container">
+        <div class="selection">
+          <div class="input--container">
             <div class="input__label">
               <label for="bill-amount">Bill</label>
             </div>
@@ -34,14 +34,17 @@
               <button>15%</button>
               <button>25%</button>
               <button>50%</button>
-              <button>Custom</button>
+              <button id="custom">Custom</button>
             </div>
           </div>
           <div>
             <label for="number-of-people">Number of People</label>
           </div>
           <div class="bottom__input--container">
-            <img src="images/icon-person.svg" alt="icon of a person" />
+            <img
+              src="images/icon-person.svg"
+              alt="icon of a person"
+            />
             <input
               type="number"
               id="number-of-people"
@@ -51,7 +54,7 @@
             />
           </div>
         </div>
-        <div class="content__results">
+        <div class="results">
           <p><strong>Tip Amount</strong> / person</p>
           <p>$.4.27</p>
           <p><strong>Total</strong> / person</p>
