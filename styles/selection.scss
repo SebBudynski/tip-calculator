@@ -39,6 +39,7 @@ label {
   &:focus,
   &:hover {
     outline: 2px solid var(--strong-cyan);
+    cursor:pointer;
   }
 }
 

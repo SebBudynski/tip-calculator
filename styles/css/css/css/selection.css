@@ -37,7 +37,8 @@ label {
 #bill-amount:focus, #bill-amount:hover,
 #number-of-people:focus,
 #number-of-people:hover {
-  outline: 2px solid var(--strong-cyan); }
+  outline: 2px solid var(--strong-cyan);
+  cursor: pointer; }
 
 input::-webkit-inner-spin-button,
 input::-webkit-outer-spin-button {

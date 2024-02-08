@@ -20,9 +20,9 @@ h1 {
 
 .content {
   background-color: var(--white);
-  border-radius: 16px;
+  border-radius: 20px;
   display: flex;
-  min-width: 50rem;
+  width: 50rem;
   justify-content: space-between;
   padding: 2rem; }
 
@@ -80,7 +80,8 @@ label {
 #bill-amount:focus, #bill-amount:hover,
 #number-of-people:focus,
 #number-of-people:hover {
-  outline: 2px solid var(--strong-cyan); }
+  outline: 2px solid var(--strong-cyan);
+  cursor: pointer; }
 
 input::-webkit-inner-spin-button,
 input::-webkit-outer-spin-button {
@@ -128,8 +129,39 @@ button:focus {
 
 .results {
   background-color: var(--very-dark-cyan);
-  border-radius: 8px;
-  width: 50%; }
+  border-radius: 14px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  min-height: 23.5rem;
+  padding: 1.2rem 0; }
+
+.tip-amount {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2.7rem; }
+
+p {
+  font-size: 0.725rem;
+  color: var(--grayish-cyan); }
+
+strong {
+  color: white;
+  font-size: 0.9rem; }
+
+.amount {
+  color: var(--strong-cyan);
+  font-size: 2.5rem;
+  margin-top: -1rem; }
+
+#reset {
+  background-color: var(--strong-cyan);
+  width: 80%;
+  margin: 6.5rem auto 0 auto;
+  height: 2.7rem; }
+
+#reset:hover, #reset:active {
+  background-color: var(--light-cyan); }
 
 .attribution {
   font-size: 11px;
