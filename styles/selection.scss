@@ -39,7 +39,7 @@ label {
   &:focus,
   &:hover {
     outline: 2px solid var(--strong-cyan);
-    cursor:pointer;
+    cursor: pointer;
   }
 }
 
@@ -64,7 +64,8 @@ input::-webkit-outer-spin-button {
   justify-content: space-between;
 }
 
-button {
+button,
+#numberInput {
   font-family: inherit;
   width: 30%;
   height: 2.5rem;
@@ -85,10 +86,24 @@ button {
   }
 }
 
-#custom{
+#custom {
   background-color: var(--very-light-grayish-cyan);
   color: var(--dark-grayish-cyan);
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     border: 2px solid var(--strong-cyan);
   }
+}
+
+#numberInput {
+  background-color: var(--very-light-grayish-cyan);
+  &:hover, &:focus {
+    outline: 2px solid var(--strong-cyan);
+    background-color: var(--very-light-grayish-cyan);
+    text-align: end;
+  }
+}
+
+.hidden {
+  display: none;
 }

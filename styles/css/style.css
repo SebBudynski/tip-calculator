@@ -97,7 +97,8 @@ input::-webkit-outer-spin-button {
   flex-wrap: wrap;
   justify-content: space-between; }
 
-button {
+button,
+#numberInput {
   font-family: inherit;
   width: 30%;
   height: 2.5rem;
@@ -107,11 +108,13 @@ button {
   background-color: var(--very-dark-cyan);
   color: var(--white);
   border-radius: 5px; }
-  button:hover {
+  button:hover,
+  #numberInput:hover {
     background-color: var(--light-cyan);
     cursor: pointer;
     color: black; }
-  button:focus {
+  button:focus,
+  #numberInput:focus {
     background-color: var(--strong-cyan);
     color: black; }
 
@@ -120,6 +123,16 @@ button {
   color: var(--dark-grayish-cyan); }
   #custom:hover, #custom:focus {
     border: 2px solid var(--strong-cyan); }
+
+#numberInput {
+  background-color: var(--very-light-grayish-cyan); }
+  #numberInput:hover, #numberInput:focus {
+    outline: 2px solid var(--strong-cyan);
+    background-color: var(--very-light-grayish-cyan);
+    text-align: end; }
+
+.hidden {
+  display: none; }
 
 .results {
   background-color: var(--very-dark-cyan);
