@@ -1,12 +1,17 @@
-'use strict';
+"use strict";
 
-const customBtn = document.querySelector('#custom');
-const customInput = document.querySelector('#numberInput')
+const customInput = document.querySelector("#number-input");
+const resetBtn = document.querySelector("#reset");
 
-
-customBtn.addEventListener('click', () => {
-    customBtn.classList.add('hidden');
-    customInput.type= 'number';
-    numberInput.focus();
+customInput.addEventListener("focus", () => {
+  customInput.placeholder = "";
 });
 
+customInput.addEventListener("blur", () => {
+  if (customInput.value === "") customInput.placeholder = "Custom";
+});
+
+resetBtn.addEventListener("click", () => {
+  customInput.value = "";
+  customInput.placeholder = "Custom";
+});
