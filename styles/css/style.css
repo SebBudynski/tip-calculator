@@ -63,7 +63,7 @@ label {
   margin-bottom: 1rem; }
 
 #bill-amount,
-#number-of-people {
+.peoples {
   font-family: inherit;
   background-color: var(--very-light-grayish-cyan);
   border: none;
@@ -75,17 +75,21 @@ label {
   height: 2.5rem;
   width: 90%; }
   #bill-amount:focus, #bill-amount:hover,
-  #number-of-people:focus,
-  #number-of-people:hover {
+  .peoples:focus,
+  .peoples:hover {
     outline: 2px solid var(--strong-cyan);
     cursor: pointer; }
+
+#bill-amount::placeholder,
+.peoples::placeholder {
+  color: var(--grayish-cyan); }
 
 input::-webkit-inner-spin-button,
 input::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0.4rem; }
 
-.selection {
+.selection-container {
   width: 50%; }
 
 .buttons-container {
@@ -129,6 +133,9 @@ button:focus {
 
 .hidden {
   display: none; }
+
+.error {
+  border: 2px solid red; }
 
 .results {
   background-color: var(--very-dark-cyan);

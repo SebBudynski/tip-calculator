@@ -18,13 +18,13 @@
         <img src="images/logo.svg" alt="logo" />
       </h1>
       <div class="content">
-        <div class="selection">
+        <div class="selection-container">
           <div class="input--container">
             <div class="input__label">
               <label for="bill-amount">Bill</label>
             </div>
             <img src="images/icon-dollar.svg" alt="icon of a dolar" />
-            <input type="number" id="bill-amount" name="bill-amount" />
+            <input type="number" id="bill-amount" name="bill-amount" placeholder="0" />
           </div>
           <div class="buttons-container">
             <h2>Select Tip %</h2>
@@ -44,8 +44,10 @@
             <img src="images/icon-person.svg" alt="icon of a person" />
             <input
               type="number"
+              class="peoples"
               id="number-of-people"
               name="number-of-people"
+              placeholder="0"
               step="1"
               min="1"
             />
