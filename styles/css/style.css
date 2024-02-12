@@ -62,8 +62,8 @@ label {
   display: inline-block;
   margin-bottom: 1rem; }
 
-#bill-amount,
-.peoples {
+.bill,
+.people {
   font-family: inherit;
   background-color: var(--very-light-grayish-cyan);
   border: none;
@@ -74,14 +74,14 @@ label {
   font-weight: 700;
   height: 2.5rem;
   width: 90%; }
-  #bill-amount:focus, #bill-amount:hover,
-  .peoples:focus,
-  .peoples:hover {
+  .bill:focus, .bill:hover,
+  .people:focus,
+  .people:hover {
     outline: 2px solid var(--strong-cyan);
     cursor: pointer; }
 
-#bill-amount::placeholder,
-.peoples::placeholder {
+.bill::placeholder,
+.people::placeholder {
   color: var(--grayish-cyan); }
 
 input::-webkit-inner-spin-button,
@@ -102,7 +102,7 @@ input::-webkit-outer-spin-button {
   justify-content: space-between; }
 
 button,
-#number-input {
+#custom-input {
   font-family: inherit;
   width: 30%;
   height: 2.5rem;
@@ -122,20 +122,20 @@ button:focus {
   background-color: var(--strong-cyan);
   color: black; }
 
-#number-input {
+#custom-input {
   background-color: var(--very-light-grayish-cyan);
   text-align: center;
   color: var(--very-dark-cyan); }
-  #number-input:hover, #number-input:focus {
+  #custom-input:hover, #custom-input:focus {
     outline: 2px solid var(--strong-cyan); }
-  #number-input:focus {
+  #custom-input:focus {
     text-align: end; }
 
 .hidden {
   display: none; }
 
 .error {
-  border: 2px solid red; }
+  outline: 2px solid red; }
 
 .results {
   background-color: var(--very-dark-cyan);

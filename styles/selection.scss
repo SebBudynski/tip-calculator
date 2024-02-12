@@ -24,8 +24,8 @@ label {
   margin-bottom: 1rem;
 }
 
-#bill-amount,
-.peoples {
+.bill,
+.people {
   font-family: inherit;
   background-color: var(--very-light-grayish-cyan);
   border: none;
@@ -43,8 +43,8 @@ label {
   }
 }
 
-#bill-amount::placeholder,
-.peoples::placeholder {
+.bill::placeholder,
+.people::placeholder {
   color: var(--grayish-cyan);
 }
 
@@ -70,7 +70,7 @@ input::-webkit-outer-spin-button {
 }
 
 button,
-#number-input {
+#custom-input {
   font-family: inherit;
   width: 30%;
   height: 2.5rem;
@@ -93,7 +93,7 @@ button:focus {
   color: black;
 }
 
-#number-input {
+#custom-input {
   background-color: var(--very-light-grayish-cyan);
   text-align: center;
   color: var(--very-dark-cyan);
@@ -111,5 +111,5 @@ button:focus {
 }
 
 .error{
-  border: 2px solid red;
+  outline: 2px solid red;
 }

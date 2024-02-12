@@ -24,17 +24,24 @@
               <label for="bill-amount">Bill</label>
             </div>
             <img src="images/icon-dollar.svg" alt="icon of a dolar" />
-            <input type="number" id="bill-amount" name="bill-amount" placeholder="0" />
+            <input
+            class="bill"
+              type="number"
+              id="bill-amount"
+              name="bill-amount"
+              min="1"
+              placeholder="0"
+            />
           </div>
           <div class="buttons-container">
             <h2>Select Tip %</h2>
             <div class="buttons">
-              <button>5%</button>
-              <button>10%</button>
-              <button>15%</button>
-              <button>25%</button>
-              <button>50%</button>
-              <input id="number-input" type="number" placeholder="Custom" />
+              <button class="tip-btn" value="0.05">5%</button>
+              <button class="tip-btn" value="0.1">10%</button>
+              <button class="tip-btn" value="0.15">15%</button>
+              <button class="tip-btn" value="0.25">25%</button>
+              <button class="tip-btn" value="0.5">50%</button>
+              <input id="custom-input" type="number" placeholder="Custom" />
             </div>
           </div>
           <div>
@@ -44,11 +51,10 @@
             <img src="images/icon-person.svg" alt="icon of a person" />
             <input
               type="number"
-              class="peoples"
+              class="people"
               id="number-of-people"
               name="number-of-people"
               placeholder="0"
-              step="1"
               min="1"
             />
           </div>
