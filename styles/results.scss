@@ -23,14 +23,15 @@ strong {
   font-size: 0.9rem;
 }
 
-.amount {
+.tip, .final-bill {
   color: var(--strong-cyan);
   font-size: 2.5rem;
   margin-top: -1rem;
 }
 
-#reset {
+.reset {
   background-color: var(--strong-cyan);
+  color: black;
   width: 80%;
   margin: 6.5rem auto 0 auto;
   height: 2.7rem;

@@ -142,6 +142,11 @@ button:focus {
 .error {
   outline: 2px solid red; }
 
+#blured {
+  background-color: var(--light-cyan);
+  color: var(--grayish-cyan);
+  opacity: 0.2; }
+
 .results {
   background-color: var(--very-dark-cyan);
   border-radius: 14px;
@@ -164,18 +169,19 @@ strong {
   color: white;
   font-size: 0.9rem; }
 
-.amount {
+.tip, .final-bill {
   color: var(--strong-cyan);
   font-size: 2.5rem;
   margin-top: -1rem; }
 
-#reset {
+.reset {
   background-color: var(--strong-cyan);
+  color: black;
   width: 80%;
   margin: 6.5rem auto 0 auto;
   height: 2.7rem; }
 
-#reset:hover, #reset:active {
+.reset:hover, .reset:active {
   background-color: var(--light-cyan); }
 
 .attribution {
