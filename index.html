@@ -22,6 +22,11 @@
           <div class="input--container">
             <div class="input__label">
               <label for="bill-amount">Bill</label>
+              <span
+                class="txt-error hidden"
+                data-for="bill-amount"
+                >Can't be zero</span
+              >
             </div>
             <img src="images/icon-dollar.svg" alt="icon of a dolar" />
             <input
@@ -46,6 +51,9 @@
           </div>
           <div>
             <label for="number-of-people">Number of People</label>
+            <span class="txt-error hidden" data-for="number-of-people"
+              >Can't be zero</span
+            >
           </div>
           <div class="bottom__input--container">
             <img src="images/icon-person.svg" alt="icon of a person" />

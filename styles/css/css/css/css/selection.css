@@ -92,14 +92,3 @@ button:focus {
 
 #custom-input:focus {
   text-align: end; }
-
-.hidden {
-  display: none; }
-
-.error {
-  outline: 2px solid red; }
-
-#blured {
-  background-color: var(--light-cyan);
-  color: var(--grayish-cyan);
-  opacity: 0.2; }

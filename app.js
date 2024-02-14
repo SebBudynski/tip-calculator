@@ -7,6 +7,7 @@ const peopleInput = document.querySelector("#number-of-people");
 const amount = document.querySelector(".tip");
 const tipBtns = document.querySelectorAll(".tip-btn");
 const finalBill = document.querySelector(".final-bill");
+const txtError = document.querySelector(".txt-error");
 let tipValue = 0;
 let tipAmount = 0;
 let billValue = 0;
@@ -18,7 +19,7 @@ const blured = () => {
     tipAmount === 0 &&
     billValue === 0 &&
     peopleValue === 0
-    ) {
+  ) {
     console.log(tipValue, tipAmount, billValue, peopleValue);
     resetBtn.id = "blured";
   } else {
@@ -36,10 +37,19 @@ const sliceInput = (input) => {
 };
 
 const displayError = (input) => {
+  const errorElement = document.querySelector(
+    `.txt-error[data-for="${input.id}"]`
+  );
   if (input.value === "" || input.value === "0") {
     input.classList.add("error");
+    if (errorElement) {
+      errorElement.classList.remove("hidden");
+    }
   } else {
     input.classList.remove("error");
+    if (errorElement) {
+      errorElement.classList.add("hidden");
+    }
   }
 };
 
@@ -94,6 +104,7 @@ customInput.addEventListener("blur", () => {
 resetBtn.addEventListener("click", () => {
   peopleInput.classList.remove("error");
   billInput.classList.remove("error");
+  txtError.classList.add("hidden");
   billInput.value = "";
   billValue = 0;
   peopleValue = 0;
@@ -113,6 +124,7 @@ billInput.addEventListener("input", () => {
   calcTip();
   calcBill();
   blured();
+  displayError(billInput);
 });
 
 billInput.addEventListener("blur", () => {
@@ -124,6 +136,7 @@ peopleInput.addEventListener("input", () => {
   calcTip();
   calcBill();
   blured();
+  displayError(peopleInput);
 });
 
 peopleInput.addEventListener("blur", () => {
