@@ -14,6 +14,10 @@
   left: 1rem;
   top: 30%; }
 
+.input-label {
+  display: flex;
+  justify-content: space-between; }
+
 h2,
 label {
   color: var(--dark-grayish-cyan);
@@ -94,7 +98,5 @@ button:focus {
   text-align: end; }
 
 .txt-error {
-  display: none; }
-
-.test {
-  color: red; }
+  color: red;
+  margin-right: 2rem; }

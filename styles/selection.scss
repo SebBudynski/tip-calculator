@@ -16,6 +16,11 @@
   }
 }
 
+.input-label {
+  display: flex;
+  justify-content: space-between;
+}
+
 h2,
 label {
   color: var(--dark-grayish-cyan);
@@ -107,9 +112,6 @@ button:focus {
 }
 
 .txt-error {
-  display: none;
-}
-
-.test {
   color: red;
+  margin-right: 2rem;
 }
