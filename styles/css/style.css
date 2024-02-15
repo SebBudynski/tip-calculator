@@ -131,17 +131,11 @@ button:focus {
   #custom-input:focus {
     text-align: end; }
 
-.hidden {
+.txt-error {
   display: none; }
 
-.error {
-  outline: 2px solid red; }
-
-#blured {
-  background-color: var(--light-cyan);
-  color: var(--grayish-cyan);
-  opacity: 0.2;
-  cursor: default; }
+.test {
+  color: red; }
 
 .results {
   background-color: var(--very-dark-cyan);
@@ -185,3 +179,18 @@ strong {
 
 .attribution a {
   color: #3e52a3; }
+
+.hidden {
+  display: none; }
+
+.error {
+  outline: 2px solid red; }
+
+#blured {
+  background-color: var(--light-cyan);
+  color: var(--grayish-cyan);
+  opacity: 0.2;
+  cursor: default; }
+
+.txt-error {
+  color: red !important; }

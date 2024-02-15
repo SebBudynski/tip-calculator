@@ -92,3 +92,9 @@ button:focus {
 
 #custom-input:focus {
   text-align: end; }
+
+.txt-error {
+  display: none; }
+
+.test {
+  color: red; }

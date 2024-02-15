@@ -87,3 +87,9 @@ button:focus {
     outline: 2px solid var(--strong-cyan); }
   #custom-input:focus {
     text-align: end; }
+
+.txt-error {
+  display: none; }
+
+.test {
+  color: red; }
