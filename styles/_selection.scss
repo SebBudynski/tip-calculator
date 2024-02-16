@@ -1,20 +1,3 @@
-.input--container {
-  position: relative;
-  img {
-    position: absolute;
-    top: 65%;
-    left: 1rem;
-  }
-}
-
-.bottom__input--container {
-  position: relative;
-  img {
-    position: absolute;
-    left: 1rem;
-    top: 30%;
-  }
-}
 
 .input-label {
   display: flex;
@@ -33,6 +16,8 @@ label {
 .people {
   font-family: inherit;
   background-color: var(--very-light-grayish-cyan);
+  background-repeat: no-repeat;
+  background-position: 10px 12px;
   border: none;
   border-radius: 3px;
   color: var(--very-dark-cyan);
@@ -46,6 +31,14 @@ label {
     outline: 2px solid var(--strong-cyan);
     cursor: pointer;
   }
+}
+
+.bill{
+  background-image: url('../../images/icon-dollar.svg');
+}
+
+.people{
+  background-image: url('../../images/icon-person.svg');
 }
 
 .bill::placeholder,

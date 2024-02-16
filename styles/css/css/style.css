@@ -1,4 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+:root {
+  --light-cyan: hsl(172, 67%, 75%);
+  --strong-cyan: hsl(172, 67%, 45%);
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%); }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
 body {
   font-family: "Space Mono", monospace;
   background-color: var(--blue);
@@ -18,44 +33,13 @@ main {
 h1 {
   margin-bottom: 3rem; }
 
-.content {
+.tip-calculator {
   background-color: var(--white);
   border-radius: 20px;
   display: flex;
   width: 66vw;
   justify-content: space-between;
   padding: 2rem; }
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
-
-:root {
-  --light-cyan: hsl(172, 67%, 75%);
-  --strong-cyan: hsl(172, 67%, 45%);
-  --very-dark-cyan: hsl(183, 100%, 15%);
-  --dark-grayish-cyan: hsl(186, 14%, 43%);
-  --grayish-cyan: hsl(184, 14%, 56%);
-  --light-grayish-cyan: hsl(185, 41%, 84%);
-  --very-light-grayish-cyan: hsl(189, 41%, 97%);
-  --white: hsl(0, 0%, 100%); }
-
-.input--container {
-  position: relative; }
-
-.input--container img {
-  position: absolute;
-  top: 65%;
-  left: 1rem; }
-
-.bottom__input--container {
-  position: relative; }
-
-.bottom__input--container img {
-  position: absolute;
-  left: 1rem;
-  top: 30%; }
 
 .input-label {
   display: flex;
@@ -72,6 +56,8 @@ label {
 .people {
   font-family: inherit;
   background-color: var(--very-light-grayish-cyan);
+  background-repeat: no-repeat;
+  background-position: 10px 12px;
   border: none;
   border-radius: 3px;
   color: var(--very-dark-cyan);
@@ -86,6 +72,12 @@ label {
 .people:hover {
   outline: 2px solid var(--strong-cyan);
   cursor: pointer; }
+
+.bill {
+  background-image: url("../../images/icon-dollar.svg"); }
+
+.people {
+  background-image: url("../../images/icon-person.svg"); }
 
 .bill::placeholder,
 .people::placeholder {
@@ -180,13 +172,6 @@ strong {
 .reset:hover, .reset:active {
   background-color: var(--light-cyan); }
 
-.attribution {
-  font-size: 11px;
-  text-align: center; }
-
-.attribution a {
-  color: #3e52a3; }
-
 .hidden {
   display: none; }
 
@@ -202,8 +187,15 @@ strong {
 .txt-error {
   color: red !important; }
 
+.attribution {
+  font-size: 11px;
+  text-align: center; }
+
+.attribution a {
+  color: #3e52a3; }
+
 @media screen and (max-width: 750px) {
-  .content {
+  .tip-calculator {
     display: block;
     width: 100vw;
     padding: 1.5rem; }
