@@ -43,17 +43,19 @@ h1 {
 
 .input--container {
   position: relative; }
-  .input--container img {
-    position: absolute;
-    top: 65%;
-    left: 1rem; }
+
+.input--container img {
+  position: absolute;
+  top: 65%;
+  left: 1rem; }
 
 .bottom__input--container {
   position: relative; }
-  .bottom__input--container img {
-    position: absolute;
-    left: 1rem;
-    top: 30%; }
+
+.bottom__input--container img {
+  position: absolute;
+  left: 1rem;
+  top: 30%; }
 
 .input-label {
   display: flex;
@@ -78,11 +80,12 @@ label {
   font-weight: 700;
   height: 2.5rem;
   width: 90%; }
-  .bill:focus, .bill:hover,
-  .people:focus,
-  .people:hover {
-    outline: 2px solid var(--strong-cyan);
-    cursor: pointer; }
+
+.bill:focus, .bill:hover,
+.people:focus,
+.people:hover {
+  outline: 2px solid var(--strong-cyan);
+  cursor: pointer; }
 
 .bill::placeholder,
 .people::placeholder {
@@ -130,10 +133,12 @@ button:focus {
   background-color: var(--very-light-grayish-cyan);
   text-align: center;
   color: var(--very-dark-cyan); }
-  #custom-input:hover, #custom-input:focus {
-    outline: 2px solid var(--strong-cyan); }
-  #custom-input:focus {
-    text-align: end; }
+
+#custom-input:hover, #custom-input:focus {
+  outline: 2px solid var(--strong-cyan); }
+
+#custom-input:focus {
+  text-align: end; }
 
 .txt-error {
   color: red;
@@ -171,8 +176,9 @@ strong {
   width: 80%;
   margin: 6.5rem auto 0 auto;
   height: 2.7rem; }
-  .reset:hover, .reset:active {
-    background-color: var(--light-cyan); }
+
+.reset:hover, .reset:active {
+  background-color: var(--light-cyan); }
 
 .attribution {
   font-size: 11px;

@@ -30,5 +30,6 @@ strong {
   width: 80%;
   margin: 6.5rem auto 0 auto;
   height: 2.7rem; }
-  .reset:hover, .reset:active {
-    background-color: var(--light-cyan); }
+
+.reset:hover, .reset:active {
+  background-color: var(--light-cyan); }
