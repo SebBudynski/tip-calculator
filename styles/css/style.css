@@ -22,7 +22,7 @@ h1 {
   background-color: var(--white);
   border-radius: 20px;
   display: flex;
-  max-width: 50rem;
+  width: 66vw;
   justify-content: space-between;
   padding: 2rem; }
 
@@ -108,7 +108,7 @@ input::-webkit-outer-spin-button {
 button,
 #custom-input {
   font-family: inherit;
-  width: 30%;
+  width: 31%;
   height: 2.5rem;
   margin-bottom: 0.75rem;
   font-size: 1.125rem;
@@ -196,9 +196,11 @@ strong {
 .txt-error {
   color: red !important; }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 750px) {
   .content {
-    display: block; }
+    display: block;
+    width: 100vw;
+    padding: 1.5rem; }
   h1 {
     margin: 0.5rem 0 2rem 0; }
   .bill,
@@ -211,6 +213,8 @@ strong {
   .selection-container,
   .results {
     width: 100%; }
+  .selection-container {
+    padding: 2.5%; }
   .people {
     margin-bottom: 2rem; }
   .tip-amount {
