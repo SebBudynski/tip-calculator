@@ -1,11 +1,3 @@
-.hidden {
-  display: none;
-}
-
-.error {
-  outline: 2px solid red;
-}
-
 #blured {
   background-color: var(--light-cyan);
   color: var(--grayish-cyan);
@@ -13,7 +5,15 @@
   cursor: default;
 }
 
-.txt-error {
-  color:red !important;
+.error {
+  outline: 2px solid red;
 }
 
+.hidden {
+  display: none;
+}
+
+.txt-error-bill, .txt-error-people {
+  color: red;
+  margin-right: 2rem;
+}

@@ -48,22 +48,22 @@ h1 {
 h2,
 label {
   color: var(--dark-grayish-cyan);
-  font-size: 0.85rem;
   display: inline-block;
+  font-size: 0.85rem;
   margin-bottom: 0.5rem; }
 
 .bill,
 .people {
-  font-family: inherit;
   background-color: var(--very-light-grayish-cyan);
   background-repeat: no-repeat;
   background-position: 10px 12px;
   border: none;
   border-radius: 3px;
   color: var(--very-dark-cyan);
-  text-align: end;
+  font-family: inherit;
   font-size: 1.5rem;
   font-weight: 700;
+  text-align: end;
   height: 2.5rem;
   width: 90%; }
 
@@ -85,8 +85,8 @@ label {
 
 input::-webkit-inner-spin-button,
 input::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0.4rem; }
+  margin: 0.4rem;
+  -webkit-appearance: none; }
 
 .selection-container {
   width: 50%; }
@@ -102,20 +102,20 @@ input::-webkit-outer-spin-button {
 
 button,
 #custom-input {
+  background-color: var(--very-dark-cyan);
+  border: none;
+  border-radius: 5px;
+  color: var(--white);
   font-family: inherit;
-  width: 31%;
+  font-size: 1.125rem;
   height: 2.5rem;
   margin-bottom: 0.75rem;
-  font-size: 1.125rem;
-  border: none;
-  background-color: var(--very-dark-cyan);
-  color: var(--white);
-  border-radius: 5px; }
+  width: 31%; }
 
 button:hover {
   background-color: var(--light-cyan);
-  cursor: pointer;
-  color: black; }
+  color: black;
+  cursor: pointer; }
 
 button:focus {
   background-color: var(--strong-cyan);
@@ -123,18 +123,14 @@ button:focus {
 
 #custom-input {
   background-color: var(--very-light-grayish-cyan);
-  text-align: center;
-  color: var(--very-dark-cyan); }
+  color: var(--very-dark-cyan);
+  text-align: center; }
 
 #custom-input:hover, #custom-input:focus {
   outline: 2px solid var(--strong-cyan); }
 
 #custom-input:focus {
   text-align: end; }
-
-.txt-error {
-  color: red;
-  margin-right: 2rem; }
 
 .results {
   background-color: var(--very-dark-cyan);
@@ -144,7 +140,7 @@ button:focus {
   flex-direction: column;
   padding: 1.2rem 0; }
 
-.tip-amount {
+.total-container {
   display: flex;
   justify-content: space-around;
   margin-top: 2.7rem; }
@@ -172,20 +168,21 @@ strong {
 .reset:hover, .reset:active {
   background-color: var(--light-cyan); }
 
-.hidden {
-  display: none; }
-
-.error {
-  outline: 2px solid red; }
-
 #blured {
   background-color: var(--light-cyan);
   color: var(--grayish-cyan);
   opacity: 0.2;
   cursor: default; }
 
-.txt-error {
-  color: red !important; }
+.error {
+  outline: 2px solid red; }
+
+.hidden {
+  display: none; }
+
+.txt-error-bill, .txt-error-people {
+  color: red;
+  margin-right: 2rem; }
 
 .attribution {
   font-size: 11px;
@@ -195,12 +192,12 @@ strong {
   color: #3e52a3; }
 
 @media screen and (max-width: 750px) {
+  h1 {
+    margin: 0.5rem 0 2rem 0; }
   .tip-calculator {
     display: block;
     width: 100vw;
     padding: 1.5rem; }
-  h1 {
-    margin: 0.5rem 0 2rem 0; }
   .bill,
   .people,
   .buttons-container {
@@ -215,7 +212,7 @@ strong {
     padding: 2.5%; }
   .people {
     margin-bottom: 2rem; }
-  .tip-amount {
+  .total-container {
     margin: 2rem; }
   .reset {
     margin: 0 auto; } }

@@ -9,7 +9,7 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="styles/css/style.css" />
+    <link rel="stylesheet" href="styles/style.css" />
     <title>Frontend Mentor | Tip calculator app</title>
   </head>
   <body>
@@ -19,10 +19,10 @@
       </h1>
       <div class="tip-calculator">
         <div class="selection-container">
-          <div class="input--container">
+          <div>
             <div class="input-label">
               <label for="bill-amount">Bill</label>
-              <span class="txt-error hidden" data-for="bill-amount"
+              <span class="txt-error-bill hidden" data-for="bill-amount"
                 >Can't be zero</span
               >
             </div>
@@ -48,11 +48,11 @@
           </div>
           <div class="input-label">
             <label for="number-of-people">Number of People</label>
-            <span class="txt-error hidden" data-for="number-of-people"
+            <span class="txt-error-people hidden" data-for="number-of-people"
               >Can't be zero</span
             >
           </div>
-          <div class="bottom__input--container">
+          <div>
             <input
               type="number"
               class="people"
@@ -64,11 +64,11 @@
           </div>
         </div>
         <div class="results">
-          <div class="tip-amount">
+          <div class="total-container">
             <p><strong>Tip Amount</strong><br />/ person</p>
             <p class="tip">$4.27</p>
           </div>
-          <div class="tip-amount">
+          <div class="total-container">
             <p>
               <strong>Total</strong><br />
               / person

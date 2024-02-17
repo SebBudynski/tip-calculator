@@ -7,69 +7,67 @@ const peopleInput = document.querySelector("#number-of-people");
 const amount = document.querySelector(".tip");
 const tipBtns = document.querySelectorAll(".tip-btn");
 const finalBill = document.querySelector(".final-bill");
-const txtError = document.querySelector(".txt-error");
+const txtErrorBill = document.querySelector(".txt-error-bill");
+const txtErrorPeople = document.querySelector(".txt-error-people");
+
 let tipValue = 0;
 let tipAmount = 0;
 let billValue = 0;
 let peopleValue = 0;
 
-const blured = () => {
+//Make reset button blured when all values are 0
+const bluredResetBtn = () => {
   if (
     tipValue === 0 &&
     tipAmount === 0 &&
     billValue === 0 &&
     peopleValue === 0
   ) {
-    console.log(tipValue, tipAmount, billValue, peopleValue);
     resetBtn.id = "blured";
   } else {
     resetBtn.id = "";
   }
 };
 
+//Lunch all calculations and check if values are correct
+const calculateAndCheckValues = () => {
+  calcBillPerPerson();
+  calcTipPerPerson();
+  bluredResetBtn();
+};
+
+//Slice input value to 6 characters
 const sliceInput = (input) => {
   if (input.value.length > 6) {
     input.value = input.value.slice(0, 6);
   }
-  calcBill();
-  calcTip();
-  blured();
+  calculateAndCheckValues();
 };
 
-const displayError = (input) => {
-  const errorElement = document.querySelector(
-    `.txt-error[data-for="${input.id}"]`
-  );
-  if (input.value === "" || input.value === "0") {
-    input.classList.add("error");
-    if (errorElement) {
-      errorElement.classList.remove("hidden");
-    }
+//Display error if bill  input is less than 1
+const displayErrorBill = () => {
+  if (billInput.value < 1) {
+    txtErrorBill.classList.remove("hidden");
+    billInput.classList.add("error");
   } else {
-    input.classList.remove("error");
-    if (errorElement) {
-      errorElement.classList.add("hidden");
-    }
+    txtErrorBill.classList.add("hidden");
+    billInput.classList.remove("error");
   }
 };
 
-tipBtns.forEach((btn) => {
-  btn.addEventListener("click", function () {
-    tipValue = parseFloat(this.value);
-    calcTip();
-    calcBill();
-    blured();
-  });
-});
+//Display error if people input is less than 1
+const displayErrorPeople = () => {
+  if (peopleInput.value < 1) {
+    txtErrorPeople.classList.remove("hidden");
+    peopleInput.classList.add("error");
+  } else {
+    txtErrorPeople.classList.add("hidden");
+    peopleInput.classList.remove("error");
+  }
+};
 
-customInput.addEventListener("input", () => {
-  tipValue = parseFloat(customInput.value) / 100;
-  calcBill();
-  calcTip();
-  blured();
-});
-
-const calcTip = () => {
+//Calculate tip per person amount
+const calcTipPerPerson = () => {
   billValue = parseFloat(billInput.value);
   peopleValue = parseInt(peopleInput.value);
   tipAmount = (billValue / peopleValue) * tipValue;
@@ -82,7 +80,8 @@ const calcTip = () => {
   }
 };
 
-const calcBill = () => {
+//Calculate final bill per person amount
+const calcBillPerPerson = () => {
   let billAmount = billValue / peopleValue + tipAmount;
   if (isNaN(billAmount)) {
     finalBill.textContent = "0";
@@ -93,6 +92,19 @@ const calcBill = () => {
   }
 };
 
+//
+tipBtns.forEach((btn) => {
+  btn.addEventListener("click", function () {
+    tipValue = parseFloat(this.value);
+    calculateAndCheckValues();
+  });
+});
+
+customInput.addEventListener("input", () => {
+  tipValue = parseFloat(customInput.value) / 100;
+  calculateAndCheckValues();
+});
+
 customInput.addEventListener("focus", () => {
   customInput.placeholder = "";
 });
@@ -101,46 +113,43 @@ customInput.addEventListener("blur", () => {
   if (customInput.value === "") customInput.placeholder = "Custom";
 });
 
+//Reset all values
 resetBtn.addEventListener("click", () => {
   peopleInput.classList.remove("error");
   billInput.classList.remove("error");
-  txtError.classList.add("hidden");
+  txtErrorBill.classList.add("hidden");
+  txtErrorPeople.classList.add("hidden");
   billInput.value = "";
+  peopleInput.value = "";
   billValue = 0;
   peopleValue = 0;
   tipValue = 0;
   tipAmount = 0;
   customInput.value = "";
   customInput.placeholder = "Custom";
-  peopleInput.value = "";
   amount.textContent = "0";
   finalBill.textContent = "0";
-  console.log(tipValue, tipAmount, billValue, peopleValue);
-  blured();
+  bluredResetBtn();
 });
 
 billInput.addEventListener("input", () => {
   sliceInput(billInput);
-  calcTip();
-  calcBill();
-  blured();
-  displayError(billInput);
+  calculateAndCheckValues();
+  displayErrorBill();
 });
 
 billInput.addEventListener("blur", () => {
-  displayError(billInput);
+  displayErrorBill();
 });
 
 peopleInput.addEventListener("input", () => {
   sliceInput(peopleInput);
-  calcTip();
-  calcBill();
-  blured();
-  displayError(peopleInput);
+  calculateAndCheckValues();
+  displayErrorPeople();
 });
 
 peopleInput.addEventListener("blur", () => {
-  displayError(peopleInput);
+  displayErrorPeople();
 });
 
 customInput.addEventListener("input", () => {

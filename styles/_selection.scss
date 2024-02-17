@@ -7,23 +7,23 @@
 h2,
 label {
   color: var(--dark-grayish-cyan);
-  font-size: 0.85rem;
   display: inline-block;
+  font-size: 0.85rem;
   margin-bottom: 0.5rem;
 }
 
 .bill,
 .people {
-  font-family: inherit;
   background-color: var(--very-light-grayish-cyan);
   background-repeat: no-repeat;
   background-position: 10px 12px;
   border: none;
   border-radius: 3px;
   color: var(--very-dark-cyan);
-  text-align: end;
+  font-family: inherit;
   font-size: 1.5rem;
   font-weight: 700;
+  text-align: end;
   height: 2.5rem;
   width: 90%;
   &:focus,
@@ -48,8 +48,8 @@ label {
 
 input::-webkit-inner-spin-button,
 input::-webkit-outer-spin-button {
-  -webkit-appearance: none;
   margin: 0.4rem;
+  -webkit-appearance: none;
 }
 
 .selection-container {
@@ -69,21 +69,21 @@ input::-webkit-outer-spin-button {
 
 button,
 #custom-input {
+  background-color: var(--very-dark-cyan);
+  border: none;
+  border-radius: 5px;
+  color: var(--white);
   font-family: inherit;
-  width: 31%;
+  font-size: 1.125rem;
   height: 2.5rem;
   margin-bottom: 0.75rem;
-  font-size: 1.125rem;
-  border: none;
-  background-color: var(--very-dark-cyan);
-  color: var(--white);
-  border-radius: 5px;
+  width: 31%;
 }
 
 button:hover {
   background-color: var(--light-cyan);
-  cursor: pointer;
   color: black;
+  cursor: pointer;
 }
 
 button:focus {
@@ -93,8 +93,8 @@ button:focus {
 
 #custom-input {
   background-color: var(--very-light-grayish-cyan);
-  text-align: center;
   color: var(--very-dark-cyan);
+  text-align: center;
   &:hover,
   &:focus {
     outline: 2px solid var(--strong-cyan);
@@ -104,7 +104,4 @@ button:focus {
   }
 }
 
-.txt-error {
-  color: red;
-  margin-right: 2rem;
-}
+
